@@ -8,10 +8,10 @@ using static Class_Model_Validation.Core.Validation.CoreDataAnnotations;
 
 namespace Class_Model_Validation.Models
 {
-    public class ExampleModels
+    public class Personal
     {
         [Required(ErrorMessage = "Adın girilmesi gerekli!")]
-        [StringLength(50,ErrorMessage ="Tanım elli karakterden uzun olamaz!")]
+        [StringLength(50, ErrorMessage = "Tanım elli karakterden uzun olamaz!")]
         public string Name { get; set; }
         [TurkishPhoneNumber(ErrorMessage = "Telefon Numarası yanlış girilmiş!")]
         public string PhoneNumber { get; set; }

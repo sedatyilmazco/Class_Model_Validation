@@ -1,4 +1,5 @@
-﻿using Class_Model_Validation.Core.exException;
+﻿using Class_Model_Validation.Core.CoreExtensions;
+using Class_Model_Validation.Core.CoreValidatorService;
 using Class_Model_Validation.Models;
 using System;
 using System.Collections.Generic;
@@ -7,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Class_Model_Validation.Core.Validation
+namespace Class_Model_Validation.Core.CoreValidation
 {
-    public static class Extensions
+    public static class CoreModelExtensions
     {
 
         public static ReturnModel Validate<T>(this T model) where T : class
@@ -22,6 +23,12 @@ namespace Class_Model_Validation.Core.Validation
             return ValidatorService.ValidateModel(model);
         }
     }
+
+}
+
+namespace Class_Model_Validation.Core.CoreValidatorService
+{
+
     internal static class ValidatorService
     {
 
@@ -94,5 +101,4 @@ namespace Class_Model_Validation.Core.Validation
             }
         }
     }
-
 }
