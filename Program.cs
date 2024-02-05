@@ -25,6 +25,7 @@ namespace Class_Model_Validation
             if (!data.Result)
             {
                 Console.WriteLine("Personel validasyondan geçemedi!");
+                Console.WriteLine(data.ErrorMessage);
                 Console.ReadLine();
                 Environment.Exit(0);
             }

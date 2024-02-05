@@ -58,7 +58,7 @@ namespace Class_Model_Validation.Core.CoreValidatorService
                 {
                     return new ReturnModel
                     {
-                        Data = errors.Select(e => $"Hata Mesajı: {e}"),
+                        ErrorMessage = string.Join(Environment.NewLine, errors.Select(e => $"Hata Mesajı: {e}")),
                         Result = false,
                     };
                 }
@@ -89,7 +89,7 @@ namespace Class_Model_Validation.Core.CoreValidatorService
 
                     return new ReturnModel
                     {
-                        Data = errors.Select(e => $"Hata Mesajı: {e.Message}"),
+                        ErrorMessage = string.Join(Environment.NewLine, errors.Select(e => $"Hata Mesajı: {e.Message}")),
                         Result = false,
                     };
                 }
